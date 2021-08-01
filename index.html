@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+ <link rel="icon" type="image/png" href="favicon.png">
+    <title>FronEndtask2</title>
+    <script src="assets/js/lib/greensock/TweenMax.min.js"></script>
+    <script src="assets/js/lib/greensock/plugins/ScrollToPlugin.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="assets/js/lib/modernizr.custom.min.js"></script>
+    <script src="assets/js/lib/iscroll-probe.js"></script>
+    <script src="scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script src="scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <script src="assets/js/demo.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <div>
+        <div class="path-slider">
+            <svg version="1.1" class="svg-ring" id="transring" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400"
+                style="enable-background:new 0 0 414 414;" xml:space="preserve">
+                <path id="Transparent_Ring" class="transrg path-slider__path"
+                    style="opacity:0.4;fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;enable-background:new"
+                    d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+                    c-47.8,0-91-19.4-122.3-50.7"></path>
+                <path id="Opaque_Ring" class="transrgwht" stroke-dasharray="0,1000"
+                    style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10; stroke-dasharray: 5, 1000;"
+                    d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+                    c-47.8,0-91-19.4-122.3-50.7"></path>
+                <g id="Dots" class="dots-nav">
+                    <g>
+                        <path class="dotsst dotsfill trans-ease" style="fill: rgb(0, 146, 255); opacity: 1;"
+                            d="M85,78c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S88.5,78,85,78z"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro trans-ease"
+                            style="opacity: 1; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M85,78c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S88.5,78,85,78z"></path>
+                    </g>
+                </g>
+                <g id="Dots1" class="dots-nav">
+                    <g>
+                        <path class="dotsst dotsfill1 trans-ease"
+                            d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S210.1,29,206.8,29z"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro1 trans-ease"
+                            style="opacity: 0; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S210.1,29,206.8,29z">H</path>
+                    </g>
+                </g>
+                <g id="Dots2" class="dots-nav ">
+                    <g>
+                        <path class="dotsst dotsfill2 trans-ease"
+                            d="M327,78c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S331,78,327,78z"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro2 trans-ease"
+                            style="opacity: 0; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M327,78c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S331,78,327,78z"></path>
+                    </g>
+                </g>
+                <g id="Dots3" class="dots-nav">
+                    <g>
+                        <path class="dotsst dotsfill3 trans-ease"
+                            d="M379.5,198c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S383,198,379.5,198z"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro3 trans-ease"
+                            style="opacity: 0; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M379.5,198c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S383,198,379.5,198z"></path>
+                    </g>
+                </g>
+                <g id="Dots4" class="dots-nav">
+                    <g>
+                        <path class="dotsst dotsfill4 trans-ease"
+                            d="M327,325c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S331,325,327,325z"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro4 trans-ease"
+                            style="opacity: 0; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M327,325c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S331,325,327,325z"></path>
+                    </g>
+                </g>
+                <g id="Dots5" class="dots-nav">
+                    <g>
+                        <path class="dotsst dotsfill5 trans-ease"
+                            d="M206.8,374c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S210.1,374,206.8,374z"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro5 trans-ease"
+                            style="opacity: 0; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M206.8,374c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S210.1,374,206.8,374z"></path>
+                    </g>
+                </g>
+                <g id="Dots6" class="dots-nav">
+                    <g>
+                        <path class="dotsst dotsfill6 trans-ease"
+                            d="M85,324c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S88.5,324,85,324z"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro6 trans-ease"
+                            style="opacity: 0; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M85,324c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S88.5,324,85,324z"></path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="round-div" id="round-div"></div>
+    <div class="container" id="container"></div>
+      
+    <div class="medium-dots d-lg-none">
+        <svg version="1.1" class="svg-ring" id="transring" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400"
+                style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+                <g id="mDots1" class="dots">
+                    <g>
+                        <path class="dotsst dotsfill1 trans-ease"
+                            d="M50,15c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S53.3,15,50,15z"></path>
+                    </g>
+                    </g>
+                <g id="mDots2" class="dots">
+                    <g>
+                        <path class="dotsst dotsfill1 trans-ease"
+                            d="M100,15c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S103.3,15,100,15z"></path>
+                    </g>
+                </g>
+                <g id="mDots3" class="dots">
+                    <g>
+                        <path class="dotsst dotsfill1 trans-ease"
+                            d="M150,15c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S153.3,15,150,15z"></path>
+                    </g>
+                </g>
+                <g id="mDots4" class="dots">
+                    <g>
+                        <path class="dotsst dotsfill1 trans-ease"
+                            d="M200,15c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S203.3,15,200,15z"></path>
+                    </g>
+                </g>
+                <g id="mDots5" class="dots">
+                    <g>
+                        <path class="dotsst dotsfill1 trans-ease"
+                            d="M250,15c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S253.3,15,250,15z"></path>
+                    </g>
+                </g>
+                
+                <g id="mDots6" class="dots">
+                    <g>
+                        <path class="dotsst dotsfill1 trans-ease"
+                            d="M300,15c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S303.3,15,300,15z"></path>
+                    </g>
+                </g>
+                <g id="mDots7" class="dots">
+                    <g>
+                        <path class="dotsst dotsfill1 trans-ease"
+                            d="M350,15c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S353.3,15,350,15z"></path>
+                    </g>
+                </g>
+                
+            </svg>
+        </div>
+    </div>
+
+    <script src="templates.js"></script>
+    <script src="main.js"></script>
+    <script>
+       
+    </script>
+</body>
+
+</html>
